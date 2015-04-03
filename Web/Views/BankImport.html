@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html ng-app="ngMainApp">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>银行导入</title>
+    <link href="../Resource/common/styles/bootstrap/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="../Resource/common/styles/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Resource/common/styles/font-awesome/font-awesome.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container-fluid" ng-controller="bankController">
+        <div class="row" style="margin-top:5px;">
+            <form name="bankimport" method="post" enctype="multipart/form-data">
+                <input type="file" name="file" class="pull-left" style="margin-top:5px;"
+                       onchange="angular.element(this).scope().getfile(this.files)" />
+                <button class="btn btn-danger icon-cloud-upload" ng-click="importBanklist()"></button>
+            </form>
+        </div>
+    </div>
+    <script src="../Resource/common/scripts/angularjs/angular.min.js"></script>
+    <script src="../Resource/common/scripts/angularjs/angular-route.min.js"></script>
+    <script src="../Resource/common/scripts/angularjs/angular-resource.min.js"></script>
+    <script src="../Resource/app/scripts/app.js"></script>
+    <script src="../Resource/app/scripts/bank/services/bankService.js"></script>
+    <script src="../Resource/app/scripts/bank/controllers/bankController.js"></script>
+</body>
+</html>

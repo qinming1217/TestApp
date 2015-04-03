@@ -1,0 +1,14 @@
+﻿<div class="container-fluid">
+    <div class="pr">
+        <div class="row">
+            <span>{{title}}:</span>
+            <input type="text" class="input-sm input-keyword" placeholder="请输入城市关键字" ng-model="keyword" ng-keydown="clearValue()" />
+            <span class="btn btn-default btn-sm icon-search icon-large" ng-click="searchCitys()"></span>
+            <input type="hidden" ng-model="city" />
+        </div>
+        <div class="pa" ng-if="citySelectShow">
+            <select class="select-list" size="5" ng-model="citySelected[aaa]" ng-change="setCityValue()"
+                    ng-options="city as city.CityName group by ('--'+city.ProvinceName + '--') for city in cityList | orderBy:'+RN'"></select>
+        </div>
+    </div>
+</div>

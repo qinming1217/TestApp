@@ -1,0 +1,37 @@
+﻿
+div 
+{
+    overflow:visible;
+}
+.pr {
+    position: relative;
+}
+
+.pa {
+    position: absolute;z-index: 2000;
+    background-color: #FFF;
+    /*border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.3);*/
+    background-clip: padding-box;
+    outline: medium none;
+    width: 150px;
+    height: 80px;
+    line-height: 20px;
+    left:35px;
+    top: 30px;
+}
+
+.input-keyword 
+{
+    width:150px;
+}
+
+.select-list 
+{
+    width:100%;
+}
+.select-subbank 
+{
+    width:300px;
+}

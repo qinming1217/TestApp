@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="../Resource/common/styles/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Resource/common/styles/font-awesome/font-awesome.min.css" rel="stylesheet" />
+    <style>
+        .divform {
+            border-radius: 4px 4px 4px 4px;
+            border:2px dashed #808080;
+        }
+
+            .divform div {
+                margin-bottom: 10px;
+            }
+
+        .span-lable {
+            padding: 3px 5px;
+            margin: -1px;
+        }
+
+        .span-border {
+            border: 1px solid #ccc;
+        }
+
+        .border-left {
+            border-radius: 4px 0px 0px 4px;
+        }
+
+        .border-right {
+            border-radius: 0px 4px 4px 0px;
+        }
+
+        .pr {
+            position: relative;
+        }
+
+        .favorite-menu {
+            left: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid table-bordered text-center col-xs-12 col-sm-12 col-md-2 col-md-push-5 divform">
+        <div class="row">
+            <h3>
+                <strong>
+                    注册
+                </strong>
+            </h3>
+        </div>
+        <div class="row">
+            <span class="span-lable span-border border-left">
+                <i class="icon-envelope-alt"></i>
+            </span>
+            <input type="text" class="span-border border-right" placeholder="Email address" />
+        </div>
+        <div class="row">
+            <span class="span-lable span-border border-left">
+                <i class="icon-key"></i>
+            </span>
+            <input type="text" placeholder="Password" class="span-border border-right" />
+        </div>
+        <div class="row">
+            <div class="pr">
+                <span class="span-lable span-border border-left">
+                    <i class="icon-heart-empty"></i>
+                </span>
+                <input type="text" placeholder="Favorite" class="span-border border-right dropdown-toggle" data-toggle="dropdown" />
+                <ul class="dropdown-menu favorite-menu">
+                    <li><a href="#"><i class="icon-hand-right"></i> Swim</a></li>
+                    <li><a href="#"><i class="icon-hand-right "></i> Sing</a></li>
+                    <li><a href="#"><i class="icon-hand-right "></i> Run</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#"><i class="icon-hand-right"></i>Other</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <a href="#" class="btn btn-info icon-signin">登录</a>
+            <a href="#" class="btn btn-success icon-ok-sign">注册</a>
+        </div>
+    </div>
+    <script src="../Resource/common/scripts/jquery/jquery.min.js"></script>
+    <script src="../Resource/common/scripts/bootstrap/bootstrap.min.js"></script>
+</body>
+</html>

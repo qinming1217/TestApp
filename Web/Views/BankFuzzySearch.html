@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html ng-app="ngMainApp">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>银行模糊查找</title>
+    <link href="../Resource/common/styles/bootstrap/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="../Resource/common/styles/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Resource/common/styles/font-awesome/font-awesome.min.css" rel="stylesheet" />
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="../Resource/common/styles/font-awesome/font-awesome-ie7.min.css">
+    <![endif]-->
+
+</head>
+<body>
+    <div class="container-fluid col-sm-12 col-xs-12 col-md-6" ng-controller="bankController" ng-init="init()">
+        <div class="row text-center" style="margin-top:10px">
+            <div class="col-sm-12 col-xs-12 col-md-6">
+                <input type="text" class="input-sm col-md-10" ng-model="keyword" />
+                <span class="btn btn-sm btn-info col-md-2 icon-search icon-large"
+                      ng-click="searchBanksByCondition()"></span>
+            </div>
+            <div class="col-sm-12 col-xs-12 col-md-6">
+                <input type="text" class="input-sm col-md-10" ng-model="subkeyword" />
+                <span class="btn btn-sm btn-info col-md-2 icon-search icon-large"
+                      ng-click="searchSubBanksByCondition()"></span>
+            </div>
+        </div>
+        <div class="row" style="margin-top:10px;">
+            <div class="col-sm-12 col-xs-12 col-md-6">
+                <select class="col-md-12" size="10" ng-if="bankSelectDisplay">
+                    <option ng-repeat="bank in bankList | orderBy:'+RN'" ng-dblclick="setBankValue(bank.BankName)">{{bank.BankName}}</option>
+                </select>
+            </div>
+            <div class="col-sm-12 col-xs-12 col-md-6">
+                <select class="col-md-12" size="10" ng-if="subbankSelectDisplay">
+                    <option ng-repeat="subbank in subbankList | orderBy:'+RN'" ng-dblclick="setSubBankValue(subbank.SubBankName)">{{subbank.SubBankName}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="row" ng-show="false">
+            <input type="hidden" ng-model="bank" />
+            <input type="hidden" ng-model="subbank" />
+        </div>
+    </div>
+    <!--<script src="../Resource/common/scripts/jquery/jquery.min.js"></script>
+    <script src="../Resource/common/scripts/bootstrap/bootstrap.min.js"></script>-->
+    <script src="../Resource/common/scripts/angularjs/angular.min.js"></script>
+    <script src="../Resource/common/scripts/angularjs/angular-route.min.js"></script>
+    <script src="../Resource/common/scripts/angularjs/angular-resource.min.js"></script>
+    <script src="../Resource/app/scripts/app.js"></script>
+    <script src="../Resource/app/scripts/bank/services/bankService.js"></script>
+    <script src="../Resource/app/scripts/bank/controllers/bankController.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+﻿<div class="container-fluid">
+    <div class="pr col-md-3">
+        <div class="row">
+            <span>{{title}}</span>
+            <input type="text" class="input-sm input-keyword" placeholder="请输入银行名称关键字" ng-model="keyword" ng-keydown="clearBank()" />
+            <span class="btn btn-sm btn-default icon-search icon-large" ng-click="searchBanks()"></span>
+            <input type="hidden" ng-model="bank" />
+        </div>
+        <div class="pa" ng-if="bankSelectShow">
+            <select class="select-list" size="5" ng-model="bankSelected[aaa]" ng-change="setBankValue()"
+                    ng-options="bank.BankName for bank in bankList | orderBy:'+RN'"></select>
+        </div>
+    </div>
+    <div class="pr col-md-3">
+        <div class="row">
+            <span>{{subtitle}}</span>
+            <input type="text" class="input-sm input-keyword" placeholder="请输入支行名称" ng-model="subkeyword" />
+            <span class="btn btn-sm btn-default icon-search icon-large" ng-click="searchSubbanks()"></span>
+            <input type="hidden" ng-model="subbank" />
+        </div>
+        <div class="pa" ng-if="subbankSelectShow">
+            <select class="subbank-list" size="5" ng-model="subbankSelected[aaa]" ng-change="setSubbankValue()"
+                    ng-options="subbank.SubBankName for subbank in subbankList | orderBy:'+RN'"></select>
+        </div>
+    </div>
+</div>
